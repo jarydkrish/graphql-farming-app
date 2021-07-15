@@ -1,0 +1,2 @@
+class FarmField < ApplicationRecord
+end
