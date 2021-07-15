@@ -27,7 +27,12 @@ gem 'jbuilder', '~> 2.7'
 
 # Use graphql
 gem 'graphql'
+
+# Ensure we have graphiql
 gem 'graphiql-rails'
+
+# Use graphql-batch
+gem 'graphql-batch'
 
 # Use rexml
 gem 'rexml'
