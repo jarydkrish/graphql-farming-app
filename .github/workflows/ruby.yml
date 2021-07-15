@@ -33,6 +33,10 @@ jobs:
       env:
         DATABASE_URL: postgres://postgres:postgres@127.0.0.1:5432/graphql_farming_app_test
         RAILS_ENV: test
+    - name: Setup assets
+      run: bundle exec rails assets:precompile
+      env:
+        RAILS_ENV: test
     - name: Run test suite
       run: bundle exec rails test
       env:
