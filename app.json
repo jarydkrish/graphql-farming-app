@@ -1,0 +1,9 @@
+{
+  "name": "Sample Rails GraphQL API",
+  "description": "A barebones rails app with a GraphQL API",
+  "repository": "https://github.com/jarydkrish/graphql-farming-app",
+  "logo": "https://www.harvestprofit.com/logo.png",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
