@@ -9,11 +9,11 @@ module Types
     field :crop, Types::CropType, null: true
 
     def crop
-      object.crop
+      Loaders::BelongsToLoader.for(Crop).load(object.crop_id)
     end
 
     def farm_field
-      object.farm_field
+      Loaders::BelongsToLoader.for(FarmField).load(object.farm_field_id)
     end
   end
 end

@@ -8,11 +8,11 @@ module Types
     field :farm, FarmType, null: false
 
     def farm
-      object.farm
+      Loaders::BelongsToLoader.for(Farm).load(object.farm_id)
     end
 
     def plantings
-      object.plantings
+      Loaders::HasManyLoader.for(Planting, :farm_field_id).load([object.id])
     end
   end
 end

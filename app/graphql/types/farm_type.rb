@@ -7,7 +7,7 @@ module Types
     field :farm_fields, [Types::FarmFieldType], null: false
 
     def farm_fields
-      object.farm_fields
+      Loaders::HasManyLoader.for(FarmField, :farm_id).load([object.id])
     end
   end
 end
