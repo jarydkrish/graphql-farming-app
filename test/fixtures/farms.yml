@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-crop_one:
-  name: Wheat
+farm_one:
+  name: That one farm
 
-crop_two:
-  name: Rye
+farm_two:
+  name: Some other farm
