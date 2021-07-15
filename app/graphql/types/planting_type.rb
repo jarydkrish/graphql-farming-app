@@ -7,5 +7,13 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :farm_field, Types::FarmFieldType, null: true
     field :crop, Types::CropType, null: true
+
+    def crop
+      object.crop
+    end
+
+    def farm_field
+      object.farm_field
+    end
   end
 end

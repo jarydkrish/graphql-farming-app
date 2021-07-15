@@ -5,5 +5,9 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :farm_fields, [Types::FarmFieldType], null: false
+
+    def farm_fields
+      object.farm_fields
+    end
   end
 end

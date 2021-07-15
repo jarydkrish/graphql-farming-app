@@ -6,5 +6,13 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :plantings, [PlantingType], null: false
     field :farm, FarmType, null: false
+
+    def farm
+      object.farm
+    end
+
+    def plantings
+      object.plantings
+    end
   end
 end
