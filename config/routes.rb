@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  root 'pages#home'
+  namespace :api do
+    resources :crops
+    resources :farms
+    resources :farm_fields
+    resources :plantings
+  end
 
   post "/graphql", to: "graphql#execute"
-  root 'pages#home'
+  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
 end

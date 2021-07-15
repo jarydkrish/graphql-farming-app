@@ -1,0 +1,2 @@
+module Api::PlantingsHelper
+end
