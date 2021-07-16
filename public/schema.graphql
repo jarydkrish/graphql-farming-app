@@ -1,0 +1,52 @@
+type Crop {
+  createdAt: ISO8601DateTime!
+  id: ID!
+  name: String
+  plantings: [Planting!]!
+  updatedAt: ISO8601DateTime!
+}
+
+type Farm {
+  createdAt: ISO8601DateTime!
+  farmFields: [FarmField!]!
+  id: ID!
+  name: String
+  updatedAt: ISO8601DateTime!
+}
+
+type FarmField {
+  createdAt: ISO8601DateTime!
+  farm: Farm!
+  id: ID!
+  name: String
+  plantings: [Planting!]!
+  updatedAt: ISO8601DateTime!
+}
+
+"""
+An ISO 8601-encoded datetime
+"""
+scalar ISO8601DateTime
+
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Planting {
+  createdAt: ISO8601DateTime!
+  crop: Crop
+  cropId: Int!
+  farmField: FarmField
+  farmFieldId: Int!
+  id: ID!
+  updatedAt: ISO8601DateTime!
+}
+
+type Query {
+  crops: [Crop!]!
+  farmFields: [FarmField!]!
+  plantings: [Planting!]!
+}

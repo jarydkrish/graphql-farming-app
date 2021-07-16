@@ -1,9 +1,13 @@
 {
-  "name": "Sample Rails GraphQL API",
-  "description": "A barebones rails app with a GraphQL API",
-  "repository": "https://github.com/jarydkrish/graphql-farming-app",
-  "logo": "https://www.harvestprofit.com/logo.png",
   "addons": [
     "heroku-postgresql:hobby-dev"
-  ]
+  ],
+  "description": "A barebones rails app with a GraphQL API",
+  "logo": "https://www.harvestprofit.com/harvest-profit-icon-100.png",
+  "name": "Sample Rails GraphQL API",
+  "repository": "https://github.com/jarydkrish/graphql-farming-app",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate db:seed"
+  },
+  "success_url": "/graphiql"
 }
